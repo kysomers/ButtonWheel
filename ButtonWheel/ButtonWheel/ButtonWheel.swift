@@ -12,19 +12,33 @@ import UIKit
 class ButtonWheel : UIView{
     
     var buttons : [ButtonSection]?
+    var borderColor  = UIColor.blue
+    var middleColor = UIColor.green
+    var numberOfSections = 0
+    var dimensionSize : CGFloat = 0
+    var showNames = true
     
-    required init?(names : [String], pictureNames : [String], colors : [UIColor]){
+    func setup(names : [String], pictureNames : [String], colors : [UIColor]){
         
         if names.count != pictureNames.count || names.count !=  colors.count{
-            return nil
+            return
         }
  
-        super.init(frame : CGRect(x: 0, y: 0, width: 0, height: 0))
+        
+    }
+    
+    func setup(names : [String], colors : [UIColor]){
         
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+
+        
+        super.init(coder: aDecoder)
+        self.backgroundColor = .clear
+        
+        dimensionSize = self.frame.width < self.frame.height ? self.frame.width : self.frame.height
+
     }
     
 
@@ -35,13 +49,18 @@ class ButtonWheel : UIView{
 struct ButtonSection{
     
     let name : String
-    let picture : UIImage
+    let picture : UIImage?
     let color : UIColor
     
     init(name : String, picture : UIImage, color : UIColor) {
         self.name = name
         self.picture = picture
         self.color = color
+    }
+    init(name : String, color : UIColor) {
+        self.name = name
+        self.color = color
+        self.picture = nil
     }
     
     
