@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83285C9E1EF49FE300897453 /* ButtonViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83285C9D1EF49FE300897453 /* ButtonViewBuilder.swift */; };
 		836D8A4A1EF1E6D7003BC9DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D8A491EF1E6D7003BC9DC /* AppDelegate.swift */; };
 		836D8A4C1EF1E6D7003BC9DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D8A4B1EF1E6D7003BC9DC /* ViewController.swift */; };
 		836D8A4F1EF1E6D7003BC9DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836D8A4D1EF1E6D7003BC9DC /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		83285C9D1EF49FE300897453 /* ButtonViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewBuilder.swift; sourceTree = "<group>"; };
 		836D8A461EF1E6D7003BC9DC /* ButtonWheel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButtonWheel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836D8A491EF1E6D7003BC9DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		836D8A4B1EF1E6D7003BC9DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				836D8A5B1EF1E763003BC9DC /* ButtonWheel.swift */,
+				83285C9D1EF49FE300897453 /* ButtonViewBuilder.swift */,
 				836D8A491EF1E6D7003BC9DC /* AppDelegate.swift */,
 				836D8A4B1EF1E6D7003BC9DC /* ViewController.swift */,
 				836D8A4D1EF1E6D7003BC9DC /* Main.storyboard */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83285C9E1EF49FE300897453 /* ButtonViewBuilder.swift in Sources */,
 				836D8A5C1EF1E763003BC9DC /* ButtonWheel.swift in Sources */,
 				836D8A5E1EF251B0003BC9DC /* UsefulExtensions.swift in Sources */,
 				836D8A4C1EF1E6D7003BC9DC /* ViewController.swift in Sources */,
@@ -314,6 +318,7 @@
 				836D8A5A1EF1E6D7003BC9DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
