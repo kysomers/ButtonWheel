@@ -12,8 +12,9 @@ import UIKit
 class ButtonWheel : UIView{
     
     var buttons = [ButtonWheelPiece]()
+    var shapes = [CAShapeLayer]()
     var borderColor  = UIColor.blue
-    var middleColor = UIColor.green
+    var middleColor = UIColor.clear
     var numberOfSections = 5 //CHANGE THIS BACK TO 0
     var dimensionSize : CGFloat = 0
     var showNames = true
@@ -76,12 +77,20 @@ class ButtonWheel : UIView{
         
         for (index, aName) in names.enumerated(){
             
+            let newPiece = ButtonViewBuilder.createPiece(buttonWheel: self, color: colors[index], sectionNumber: index)
+            backgroundView.layer.addSublayer(newPiece)
+            shapes.append(newPiece)
+            
+            
             var myPicture : String? = nil
             if let pictureNames = pictureNames{
                 myPicture = pictureNames[index]
             }
+            
+            /*
             let newPiece = ButtonWheelPiece(name: aName, pictureName: myPicture, color: colors[index], position: index, total: names.count, buttonNamesWillBeShown: buttonNamesWillBeShown)
             buttons.append(newPiece)
+            */
             
         }
         

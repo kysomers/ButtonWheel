@@ -30,7 +30,12 @@ struct ButtonViewBuilder {
         shapeLayer.lineWidth = buttonWheel.dimensionSize / 2 - buttonWheel.middleRadius
         
         
+        
         return shapeLayer
+    }
+    
+    static func destroyView(){
+        //fill this in for method to handle button getting destroyed for if it gets reset
     }
 }
 

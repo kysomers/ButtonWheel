@@ -10,8 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var myButtonWheel: ButtonWheel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let buttonNames = ["Button1", "Button 2", "Button3", "Button4", "Button5"]
+        let buttonColors : [UIColor] = [.red, .blue, .green, .yellow, .brown]
+        
+        myButtonWheel.setupWith(names: buttonNames, colors: buttonColors, buttonNamesWillBeShown: true)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
