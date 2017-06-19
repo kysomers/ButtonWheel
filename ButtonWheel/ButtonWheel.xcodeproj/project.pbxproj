@@ -16,6 +16,7 @@
 		836D8A5C1EF1E763003BC9DC /* ButtonWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D8A5B1EF1E763003BC9DC /* ButtonWheel.swift */; };
 		836D8A5E1EF251B0003BC9DC /* UsefulExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D8A5D1EF251B0003BC9DC /* UsefulExtensions.swift */; };
 		836D8A601EF26757003BC9DC /* ButtonWheelPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D8A5F1EF26757003BC9DC /* ButtonWheelPiece.swift */; };
+		83D967181EF742790087F5C3 /* TouchManagement+VectorFuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D967171EF742790087F5C3 /* TouchManagement+VectorFuntime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		836D8A5B1EF1E763003BC9DC /* ButtonWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonWheel.swift; sourceTree = "<group>"; };
 		836D8A5D1EF251B0003BC9DC /* UsefulExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsefulExtensions.swift; sourceTree = "<group>"; };
 		836D8A5F1EF26757003BC9DC /* ButtonWheelPiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonWheelPiece.swift; sourceTree = "<group>"; };
+		83D967171EF742790087F5C3 /* TouchManagement+VectorFuntime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TouchManagement+VectorFuntime.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			children = (
 				836D8A5B1EF1E763003BC9DC /* ButtonWheel.swift */,
 				83285C9D1EF49FE300897453 /* ButtonViewBuilder.swift */,
+				83D967171EF742790087F5C3 /* TouchManagement+VectorFuntime.swift */,
 				836D8A491EF1E6D7003BC9DC /* AppDelegate.swift */,
 				836D8A4B1EF1E6D7003BC9DC /* ViewController.swift */,
 				836D8A4D1EF1E6D7003BC9DC /* Main.storyboard */,
@@ -153,6 +156,7 @@
 				836D8A5C1EF1E763003BC9DC /* ButtonWheel.swift in Sources */,
 				836D8A5E1EF251B0003BC9DC /* UsefulExtensions.swift in Sources */,
 				836D8A4C1EF1E6D7003BC9DC /* ViewController.swift in Sources */,
+				83D967181EF742790087F5C3 /* TouchManagement+VectorFuntime.swift in Sources */,
 				836D8A4A1EF1E6D7003BC9DC /* AppDelegate.swift in Sources */,
 				836D8A601EF26757003BC9DC /* ButtonWheelPiece.swift in Sources */,
 			);

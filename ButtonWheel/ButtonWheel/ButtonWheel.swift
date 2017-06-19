@@ -9,18 +9,24 @@
 import Foundation
 import UIKit
 
+protocol ButtWheelDelegate{
+    func didTapWheelButtonWithName(name : String)
+}
+
 class ButtonWheel : UIView{
     
     var buttons = [ButtonWheelPiece]()
     var shapes = [CAShapeLayer]()
+    var buttonNames = [String]()
     var borderColor  = UIColor.blue
     var middleColor = UIColor.clear
-    var numberOfSections = 5 //CHANGE THIS BACK TO 0
+    var numberOfSections = 0
     var dimensionSize : CGFloat = 0
     var showNames = true
     var showPictures = true
     let backgroundView =  UIView()
     var hasDrawn = false
+    
     
     //Any setter method for this will need to re-call setup
     public var middleRadius : CGFloat = 0
@@ -31,6 +37,11 @@ class ButtonWheel : UIView{
         
         super.init(coder: aDecoder)
         configureBackgroundView()
+
+        //tapRecognizer.delegate = self
+        self.isUserInteractionEnabled = true
+
+
         
 
     }
@@ -38,6 +49,10 @@ class ButtonWheel : UIView{
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureBackgroundView()
+
+       // tapRecognizer.delegate = self
+        self.isUserInteractionEnabled = true
+
     }
     
     func configureBackgroundView(){
@@ -75,11 +90,14 @@ class ButtonWheel : UIView{
             showPictures = false
         }
         
+        self.numberOfSections = names.count
+        
         for (index, aName) in names.enumerated(){
             
             let newPiece = ButtonViewBuilder.createPiece(buttonWheel: self, color: colors[index], sectionNumber: index)
             backgroundView.layer.addSublayer(newPiece)
             shapes.append(newPiece)
+            buttonNames.append(aName)
             
             
             var myPicture : String? = nil
@@ -102,11 +120,25 @@ class ButtonWheel : UIView{
         setupWith(names: names, pictureNames: nil, colors: colors, buttonNamesWillBeShown : buttonNamesWillBeShown)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first!
+        let tappedPoint = touch.location(in: self)
+        let buttonName = TouchManagement.getNameFromPoint(buttonWheel: self, tappedPoint: tappedPoint)
+        
+        guard let unwrappedButtonName = buttonName else {
+            return
+        }
+        print(unwrappedButtonName)
+
+        
+    }
+    
     
     
 
     
     
 }
+
 
 
