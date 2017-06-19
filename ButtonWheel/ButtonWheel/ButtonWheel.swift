@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol ButtWheelDelegate{
+protocol ButtonWheelDelegate{
     func didTapWheelButtonWithName(name : String)
 }
 
@@ -26,7 +26,7 @@ class ButtonWheel : UIView{
     var showPictures = true
     let backgroundView =  UIView()
     var hasDrawn = false
-    
+    var delegate : ButtonWheelDelegate?
     
     //Any setter method for this will need to re-call setup
     public var middleRadius : CGFloat = 0
@@ -128,8 +128,8 @@ class ButtonWheel : UIView{
         guard let unwrappedButtonName = buttonName else {
             return
         }
-        print(unwrappedButtonName)
-
+        
+        delegate?.didTapWheelButtonWithName(name: unwrappedButtonName)
         
     }
     
