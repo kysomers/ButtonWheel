@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var myButtonWheel: ButtonWheel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let buttonNames = ["Button1", "Button2", "Button3", "Button4", "Button5"]
+        let buttonNames = ["EighthNoteImg", "EighthNoteImg", "EighthNoteImg", "EighthNoteImg", "EighthNoteImg"]
         let buttonColors : [UIColor] = [.red, .blue, .green, .yellow, .brown]
         
         myButtonWheel.setupWith(names: buttonNames, colors: buttonColors, buttonNamesWillBeShown: true)
