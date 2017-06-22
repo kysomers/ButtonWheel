@@ -33,7 +33,12 @@ struct ButtonViewBuilder {
         
         return shapeLayer
     }
-    //static func addImageToButton(buttonWheel : ButtonWheel, )
+    static func addImageToButton(buttonWheel : ButtonWheel, image : UIImage, sectionNumber : Int){
+        
+        
+        
+        
+    }
     
     static func destroyView(){
         //fill this in for method to handle button getting destroyed for if it gets reset

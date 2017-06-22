@@ -11,20 +11,19 @@ import UIKit
 
 struct TouchManagement{
     
-    static let twoPi = Double.pi * 2
     
     static func getNameFromPoint(buttonWheel : ButtonWheel, tappedPoint : CGPoint) -> String?{
         let centerPoint = CGPoint(x: buttonWheel.frame.width / 2, y: buttonWheel.frame.height / 2)
         
-        let angle = angleFromPoints(centerPoint: centerPoint, tappedPoint: tappedPoint)
-        let distance = CGFloat(distanceFromCenter(centerPoint: centerPoint, tappedPoint: tappedPoint))
+        let angle = VectorHelp.angleFromPoints(centerPoint: centerPoint, tappedPoint: tappedPoint)
+        let distance = CGFloat(VectorHelp.distanceFromCenter(centerPoint: centerPoint, tappedPoint: tappedPoint))
         let numberOfButtons = buttonWheel.buttonNames.count
         
         if distance > buttonWheel.dimensionSize || distance < buttonWheel.middleRadius{
             return nil
         }
         
-        let index = Int(angle * Double(numberOfButtons) / twoPi)
+        let index = Int(angle * Double(numberOfButtons) / VectorHelp.twoPi)
         
         return buttonWheel.buttonNames[index]
 
@@ -32,10 +31,18 @@ struct TouchManagement{
     }
     
     
+
+}
+
+struct VectorHelp {
+    
+    public static let twoPi = Double.pi * 2
+
+    
     static func angleFromPoints(centerPoint : CGPoint, tappedPoint : CGPoint) -> Double{
         let translatedX = Double(tappedPoint.x - centerPoint.x)
         let translatedY = -1 * Double(tappedPoint.y - centerPoint.y) // the negative is to flip it since y in math increases as you go up
-
+        
         var messedUpResult = atan(translatedY / translatedX)
         if translatedX < 0{
             messedUpResult += Double.pi
@@ -52,11 +59,11 @@ struct TouchManagement{
             translatedResult -= twoPi
         }
         
-
+        
         
         return translatedResult
         
-
+        
     }
     
     
@@ -67,5 +74,13 @@ struct TouchManagement{
         
         
         return sqrt(Double(squaredDistance))
+    }
+    
+    static func getCenterOfPiece(buttonWheel : ButtonWheel, sectionNumber : Int) -> CGPoint{
+        
+        let distance = Double(buttonWheel.dimensionSize / 2 - (buttonWheel.dimensionSize / 2 - buttonWheel.middleRadius) / 2)
+        let ratioOfCircleToCenterOfPiece = Double(sectionNumber) / Double(buttonWheel.buttonNames.count) + 1 / Double(buttonWheel.buttonNames.count)
+        let angle = twoPi * ratioOfCircleToCenterOfPiece
+        return CGPoint(x: cos(angle) * distance , y: sin(angle) * distance)
     }
 }

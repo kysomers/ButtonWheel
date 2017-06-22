@@ -15,7 +15,6 @@ protocol ButtonWheelDelegate{
 
 class ButtonWheel : UIView{
     
-    var buttons = [ButtonWheelPiece]()
     var shapes = [CAShapeLayer]()
     var buttonNames = [String]()
     var borderColor  = UIColor.blue
@@ -97,6 +96,9 @@ class ButtonWheel : UIView{
             let newPiece = ButtonViewBuilder.createPiece(buttonWheel: self, color: colors[index], sectionNumber: index)
             backgroundView.layer.addSublayer(newPiece)
             shapes.append(newPiece)
+            
+            print(VectorHelp.getCenterOfPiece(buttonWheel: self, sectionNumber: index)) //Doesn't go here, just for testing
+            
             buttonNames.append(aName)
             
             
@@ -105,10 +107,6 @@ class ButtonWheel : UIView{
                 myPicture = pictureNames[index]
             }
             
-            /*
-            let newPiece = ButtonWheelPiece(name: aName, pictureName: myPicture, color: colors[index], position: index, total: names.count, buttonNamesWillBeShown: buttonNamesWillBeShown)
-            buttons.append(newPiece)
-            */
             
         }
         
