@@ -69,7 +69,7 @@ struct VectorHelp {
     
     static func distanceFromCenter(centerPoint : CGPoint, tappedPoint : CGPoint) -> Double{
         let xdiff = centerPoint.x - tappedPoint.x
-        let ydiff = (centerPoint.y - tappedPoint.y )
+        let ydiff = centerPoint.y - tappedPoint.y
         let squaredDistance = xdiff * xdiff + ydiff * ydiff
         
         
@@ -79,8 +79,11 @@ struct VectorHelp {
     static func getCenterOfPiece(buttonWheel : ButtonWheel, sectionNumber : Int) -> CGPoint{
         
         let distance = Double(buttonWheel.dimensionSize / 2 - (buttonWheel.dimensionSize / 2 - buttonWheel.middleRadius) / 2)
-        let ratioOfCircleToCenterOfPiece = Double(sectionNumber) / Double(buttonWheel.buttonNames.count) + 1 / Double(buttonWheel.buttonNames.count)
+
+        let ratioOfCircleToCenterOfPiece = Double(sectionNumber) / Double(buttonWheel.numberOfSections) + 0.5 / Double(buttonWheel.numberOfSections)
         let angle = twoPi * ratioOfCircleToCenterOfPiece
-        return CGPoint(x: cos(angle) * distance , y: sin(angle) * distance)
+        let tranformedAngle = angle * -1 + Double.pi / 2 //need to transform sincr we defined a polar coordinate system that starts at the top and advances clockwise
+        let uncorrectedCenter = CGPoint(x: cos(tranformedAngle) * distance , y: sin(tranformedAngle) * distance)
+        return CGPoint(x: uncorrectedCenter.x + buttonWheel.backgroundView.frame.midX, y: uncorrectedCenter.y + buttonWheel.backgroundView.frame.midY)
     }
 }
