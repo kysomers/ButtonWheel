@@ -86,4 +86,9 @@ struct VectorHelp {
         let uncorrectedCenter = CGPoint(x: cos(tranformedAngle) * distance , y: sin(tranformedAngle) * distance)
         return CGPoint(x: uncorrectedCenter.x + buttonWheel.backgroundView.frame.midX, y: uncorrectedCenter.y + buttonWheel.backgroundView.frame.midY)
     }
+    
+    static func getLabelFrameForPiece(buttonWheel : ButtonWheel, sectionNumber : Int) -> CGRect{
+        //Write stuff in here
+        return CGRect(x: 0, y: 0, width: 0, height: 0)
+    }
 }
