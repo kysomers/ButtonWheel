@@ -34,8 +34,9 @@ struct ButtonViewBuilder {
         return shapeLayer
     }
     static func addImageToButton(buttonWheel : ButtonWheel, image : UIImage, sectionNumber : Int){
-        var imageView = UIImageView(frame: VectorHelp.getLabelFrameForPiece(buttonWheel: buttonWheel, sectionNumber: sectionNumber))
+        let imageView = UIImageView(frame: VectorHelp.getLabelFrameForPiece(buttonWheel: buttonWheel, sectionNumber: sectionNumber))
         imageView.image = image
+        //imageView.backgroundColor = UIColor.purple
         buttonWheel.backgroundView.addSubview(imageView)
         
         

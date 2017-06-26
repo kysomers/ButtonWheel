@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol ButtonWheelDelegate{
-    func didTapWheelButtonWithName(name : String)
+    func didTapButtonWheelAtName(name : String)
 }
 
 class ButtonWheel : UIView{
@@ -129,7 +129,7 @@ class ButtonWheel : UIView{
             return
         }
         
-        delegate?.didTapWheelButtonWithName(name: unwrappedButtonName)
+        delegate?.didTapButtonWheelAtName(name: unwrappedButtonName)
         
     }
     
