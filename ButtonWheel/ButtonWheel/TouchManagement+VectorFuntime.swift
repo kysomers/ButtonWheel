@@ -34,7 +34,7 @@ struct TouchManagement{
 
 }
 
-struct VectorHelp {
+class VectorHelp {
     
     public static let twoPi = Double.pi * 2
 
@@ -83,12 +83,18 @@ struct VectorHelp {
         let ratioOfCircleToCenterOfPiece = Double(sectionNumber) / Double(buttonWheel.numberOfSections) + 0.5 / Double(buttonWheel.numberOfSections)
         let angle = twoPi * ratioOfCircleToCenterOfPiece
         let tranformedAngle = angle * -1 + Double.pi / 2 //need to transform sincr we defined a polar coordinate system that starts at the top and advances clockwise
-        let uncorrectedCenter = CGPoint(x: cos(tranformedAngle) * distance , y: sin(tranformedAngle) * distance)
+        
+        
+        let uncorrectedCenter = CGPoint(x: cos(tranformedAngle) * distance , y: sin(tranformedAngle) * distance * -1)
         return CGPoint(x: uncorrectedCenter.x + buttonWheel.backgroundView.frame.midX, y: uncorrectedCenter.y + buttonWheel.backgroundView.frame.midY)
     }
     
     static func getLabelFrameForPiece(buttonWheel : ButtonWheel, sectionNumber : Int) -> CGRect{
         //Write stuff in here
-        return CGRect(x: 0, y: 0, width: 0, height: 0)
+        var labelFrame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        labelFrame.setCenter(getCenterOfPiece(buttonWheel: buttonWheel, sectionNumber: sectionNumber))
+        print(getCenterOfPiece(buttonWheel: buttonWheel, sectionNumber: sectionNumber))
+        print(buttonWheel.backgroundView.frame.midX)
+        return labelFrame
     }
 }

@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         let buttonNames = ["EighthNoteImg", "EighthNoteImg", "EighthNoteImg", "EighthNoteImg", "EighthNoteImg"]
         let buttonColors : [UIColor] = [.red, .blue, .green, .yellow, .brown]
         
-        myButtonWheel.setupWith(names: buttonNames, colors: buttonColors, buttonNamesWillBeShown: true)
+        myButtonWheel.setupWith(names: buttonNames, pictureNames: buttonNames, colors: buttonColors, buttonNamesWillBeShown: true)
         myButtonWheel.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
     }

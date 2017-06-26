@@ -97,15 +97,17 @@ class ButtonWheel : UIView{
             backgroundView.layer.addSublayer(newPiece)
             shapes.append(newPiece)
             
-            print(VectorHelp.getCenterOfPiece(buttonWheel: self, sectionNumber: index)) //Doesn't go here, just for testing
+           // print(VectorHelp.getCenterOfPiece(buttonWheel: self, sectionNumber: index)) //Doesn't go here, just for testing
             
             buttonNames.append(aName)
             
             
             var myPicture : String? = nil
-            if let pictureNames = pictureNames{
-                myPicture = pictureNames[index]
+            if let pictureName = pictureNames?[index]{
+                myPicture = pictureName
             }
+            var buttonImage = UIImage(named: myPicture!)
+            ButtonViewBuilder.addImageToButton(buttonWheel: self, image: buttonImage!, sectionNumber: index)
             
             
         }
