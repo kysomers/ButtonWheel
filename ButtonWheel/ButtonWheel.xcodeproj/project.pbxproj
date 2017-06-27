@@ -27,7 +27,7 @@
 		832EEA6A1EF811FD001AA00E /* EighthNoteImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EighthNoteImg.png; sourceTree = "<group>"; };
 		834A51671F01EE4400177D9D /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		834A51691F02A96F00177D9D /* VectorHelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorHelp.swift; sourceTree = "<group>"; };
-		834A516B1F02AA9C00177D9D /* ImageSizingHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSizingHandler.swift; sourceTree = "<group>"; };
+		834A516B1F02AA9C00177D9D /* ImageSizingHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageSizingHandler.swift; path = ../ImageSizingHandler.swift; sourceTree = "<group>"; };
 		834A516D1F02AAB700177D9D /* TouchManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchManagement.swift; sourceTree = "<group>"; };
 		836D8A461EF1E6D7003BC9DC /* ButtonWheel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButtonWheel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836D8A491EF1E6D7003BC9DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +63,7 @@
 		834A51701F02AB0000177D9D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				834A516B1F02AA9C00177D9D /* ImageSizingHandler.swift */,
 				83285C9D1EF49FE300897453 /* ButtonViewBuilder.swift */,
 				834A516D1F02AAB700177D9D /* TouchManagement.swift */,
 				834A51691F02A96F00177D9D /* VectorHelp.swift */,
@@ -82,7 +83,6 @@
 		836D8A3D1EF1E6D7003BC9DC = {
 			isa = PBXGroup;
 			children = (
-				834A516B1F02AA9C00177D9D /* ImageSizingHandler.swift */,
 				836D8A481EF1E6D7003BC9DC /* ButtonWheel */,
 				836D8A471EF1E6D7003BC9DC /* Products */,
 			);
