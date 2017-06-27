@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol ButtonWheelDelegate{
-    func didTapWheelButtonWithName(name : String)
+    func didTapButtonWheelAtName(name : String)
 }
 
 class ButtonWheel : UIView{
@@ -26,9 +26,16 @@ class ButtonWheel : UIView{
     let backgroundView =  UIView()
     var hasDrawn = false
     var delegate : ButtonWheelDelegate?
+    var longestDiagonal : CGFloat = CGFloat.greatestFiniteMagnitude
     
     //Any setter method for this will need to re-call setup
-    public var middleRadius : CGFloat = 0
+    public var middleRadius : CGFloat = 0{
+        
+        didSet{
+            //call custom setup
+        }
+        
+    }
     
     
     
@@ -59,7 +66,7 @@ class ButtonWheel : UIView{
         
         dimensionSize = self.frame.width < self.frame.height ? self.frame.width : self.frame.height
         
-        self.middleRadius = dimensionSize / 6
+        self.middleRadius = dimensionSize * MiddleRadiusSize.medium.rawValue
         
         
         self.addSubview(backgroundView)
@@ -97,15 +104,17 @@ class ButtonWheel : UIView{
             backgroundView.layer.addSublayer(newPiece)
             shapes.append(newPiece)
             
-            print(VectorHelp.getCenterOfPiece(buttonWheel: self, sectionNumber: index)) //Doesn't go here, just for testing
+           // print(VectorHelp.getCenterOfPiece(buttonWheel: self, sectionNumber: index)) //Doesn't go here, just for testing
             
             buttonNames.append(aName)
             
             
             var myPicture : String? = nil
-            if let pictureNames = pictureNames{
-                myPicture = pictureNames[index]
+            if let pictureName = pictureNames?[index]{
+                myPicture = pictureName
             }
+            var buttonImage = UIImage(named: myPicture!)
+            ButtonViewBuilder.addImageToButton(buttonWheel: self, image: buttonImage!, sectionNumber: index)
             
             
         }
@@ -127,7 +136,7 @@ class ButtonWheel : UIView{
             return
         }
         
-        delegate?.didTapWheelButtonWithName(name: unwrappedButtonName)
+        delegate?.didTapButtonWheelAtName(name: unwrappedButtonName)
         
     }
     

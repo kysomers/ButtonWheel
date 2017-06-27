@@ -1,43 +1,18 @@
 //
-//  TouchManagement+VectorFuntime.swift
+//  VectorHelp.swift
 //  ButtonWheel
 //
-//  Created by Kyle Somers on 6/18/17.
+//  Created by Kyle Somers on 6/27/17.
 //  Copyright © 2017 Kyle Somers. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-struct TouchManagement{
-    
-    
-    static func getNameFromPoint(buttonWheel : ButtonWheel, tappedPoint : CGPoint) -> String?{
-        let centerPoint = CGPoint(x: buttonWheel.frame.width / 2, y: buttonWheel.frame.height / 2)
-        
-        let angle = VectorHelp.angleFromPoints(centerPoint: centerPoint, tappedPoint: tappedPoint)
-        let distance = CGFloat(VectorHelp.distanceFromCenter(centerPoint: centerPoint, tappedPoint: tappedPoint))
-        let numberOfButtons = buttonWheel.buttonNames.count
-        
-        if distance > buttonWheel.dimensionSize || distance < buttonWheel.middleRadius{
-            return nil
-        }
-        
-        let index = Int(angle * Double(numberOfButtons) / VectorHelp.twoPi)
-        
-        return buttonWheel.buttonNames[index]
-
-        
-    }
-    
-    
-
-}
-
-struct VectorHelp {
+class VectorHelp {
     
     public static let twoPi = Double.pi * 2
-
+    
     
     static func angleFromPoints(centerPoint : CGPoint, tappedPoint : CGPoint) -> Double{
         let translatedX = Double(tappedPoint.x - centerPoint.x)
@@ -69,7 +44,7 @@ struct VectorHelp {
     
     static func distanceFromCenter(centerPoint : CGPoint, tappedPoint : CGPoint) -> Double{
         let xdiff = centerPoint.x - tappedPoint.x
-        let ydiff = (centerPoint.y - tappedPoint.y )
+        let ydiff = centerPoint.y - tappedPoint.y
         let squaredDistance = xdiff * xdiff + ydiff * ydiff
         
         
@@ -79,8 +54,24 @@ struct VectorHelp {
     static func getCenterOfPiece(buttonWheel : ButtonWheel, sectionNumber : Int) -> CGPoint{
         
         let distance = Double(buttonWheel.dimensionSize / 2 - (buttonWheel.dimensionSize / 2 - buttonWheel.middleRadius) / 2)
-        let ratioOfCircleToCenterOfPiece = Double(sectionNumber) / Double(buttonWheel.buttonNames.count) + 1 / Double(buttonWheel.buttonNames.count)
+        
+        let ratioOfCircleToCenterOfPiece = Double(sectionNumber) / Double(buttonWheel.numberOfSections) + 0.5 / Double(buttonWheel.numberOfSections)
         let angle = twoPi * ratioOfCircleToCenterOfPiece
-        return CGPoint(x: cos(angle) * distance , y: sin(angle) * distance)
+        let tranformedAngle = angle * -1 + Double.pi / 2 //need to transform sincr we defined a polar coordinate system that starts at the top and advances clockwise
+        
+        
+        let uncorrectedCenter = CGPoint(x: cos(tranformedAngle) * distance , y: sin(tranformedAngle) * distance * -1)
+        return CGPoint(x: uncorrectedCenter.x + buttonWheel.backgroundView.frame.midX, y: uncorrectedCenter.y + buttonWheel.backgroundView.frame.midY)
     }
+    
+    static func getLabelFrameForPiece(buttonWheel : ButtonWheel, sectionNumber : Int) -> CGRect{
+        //Write stuff in here
+        var labelFrame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        labelFrame.setCenter(getCenterOfPiece(buttonWheel: buttonWheel, sectionNumber: sectionNumber))
+        print(getCenterOfPiece(buttonWheel: buttonWheel, sectionNumber: sectionNumber))
+        print(buttonWheel.backgroundView.frame.midX)
+        return labelFrame
+    }
+    
+    
 }

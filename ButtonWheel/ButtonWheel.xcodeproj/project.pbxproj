@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		83285C9E1EF49FE300897453 /* ButtonViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83285C9D1EF49FE300897453 /* ButtonViewBuilder.swift */; };
 		832EEA6B1EF811FD001AA00E /* EighthNoteImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 832EEA6A1EF811FD001AA00E /* EighthNoteImg.png */; };
+		834A51681F01EE4400177D9D /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A51671F01EE4400177D9D /* Enums.swift */; };
+		834A516A1F02A96F00177D9D /* VectorHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A51691F02A96F00177D9D /* VectorHelp.swift */; };
+		834A516C1F02AA9C00177D9D /* ImageSizingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A516B1F02AA9C00177D9D /* ImageSizingHandler.swift */; };
+		834A516E1F02AAB700177D9D /* TouchManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A516D1F02AAB700177D9D /* TouchManagement.swift */; };
 		836D8A4A1EF1E6D7003BC9DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D8A491EF1E6D7003BC9DC /* AppDelegate.swift */; };
 		836D8A4C1EF1E6D7003BC9DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D8A4B1EF1E6D7003BC9DC /* ViewController.swift */; };
 		836D8A4F1EF1E6D7003BC9DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836D8A4D1EF1E6D7003BC9DC /* Main.storyboard */; };
@@ -16,12 +20,15 @@
 		836D8A541EF1E6D7003BC9DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836D8A521EF1E6D7003BC9DC /* LaunchScreen.storyboard */; };
 		836D8A5C1EF1E763003BC9DC /* ButtonWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D8A5B1EF1E763003BC9DC /* ButtonWheel.swift */; };
 		836D8A5E1EF251B0003BC9DC /* UsefulExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D8A5D1EF251B0003BC9DC /* UsefulExtensions.swift */; };
-		83D967181EF742790087F5C3 /* TouchManagement+VectorFuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D967171EF742790087F5C3 /* TouchManagement+VectorFuntime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		83285C9D1EF49FE300897453 /* ButtonViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewBuilder.swift; sourceTree = "<group>"; };
 		832EEA6A1EF811FD001AA00E /* EighthNoteImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EighthNoteImg.png; sourceTree = "<group>"; };
+		834A51671F01EE4400177D9D /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		834A51691F02A96F00177D9D /* VectorHelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorHelp.swift; sourceTree = "<group>"; };
+		834A516B1F02AA9C00177D9D /* ImageSizingHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageSizingHandler.swift; path = ../ImageSizingHandler.swift; sourceTree = "<group>"; };
+		834A516D1F02AAB700177D9D /* TouchManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchManagement.swift; sourceTree = "<group>"; };
 		836D8A461EF1E6D7003BC9DC /* ButtonWheel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButtonWheel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836D8A491EF1E6D7003BC9DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		836D8A4B1EF1E6D7003BC9DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,8 +37,7 @@
 		836D8A531EF1E6D7003BC9DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		836D8A551EF1E6D7003BC9DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		836D8A5B1EF1E763003BC9DC /* ButtonWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonWheel.swift; sourceTree = "<group>"; };
-		836D8A5D1EF251B0003BC9DC /* UsefulExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsefulExtensions.swift; sourceTree = "<group>"; };
-		83D967171EF742790087F5C3 /* TouchManagement+VectorFuntime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TouchManagement+VectorFuntime.swift"; sourceTree = "<group>"; };
+		836D8A5D1EF251B0003BC9DC /* UsefulExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsefulExtensions.swift; path = ../UsefulExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,10 +51,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		836D8A3D1EF1E6D7003BC9DC = {
+		834A516F1F02AAEF00177D9D /* Example App */ = {
+			isa = PBXGroup;
+			children = (
+				836D8A491EF1E6D7003BC9DC /* AppDelegate.swift */,
+				836D8A4B1EF1E6D7003BC9DC /* ViewController.swift */,
+			);
+			name = "Example App";
+			sourceTree = "<group>";
+		};
+		834A51701F02AB0000177D9D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				834A516B1F02AA9C00177D9D /* ImageSizingHandler.swift */,
+				83285C9D1EF49FE300897453 /* ButtonViewBuilder.swift */,
+				834A516D1F02AAB700177D9D /* TouchManagement.swift */,
+				834A51691F02A96F00177D9D /* VectorHelp.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		834A51711F02AB2000177D9D /* Extensions and Enums */ = {
 			isa = PBXGroup;
 			children = (
 				836D8A5D1EF251B0003BC9DC /* UsefulExtensions.swift */,
+				834A51671F01EE4400177D9D /* Enums.swift */,
+			);
+			name = "Extensions and Enums";
+			sourceTree = "<group>";
+		};
+		836D8A3D1EF1E6D7003BC9DC = {
+			isa = PBXGroup;
+			children = (
 				836D8A481EF1E6D7003BC9DC /* ButtonWheel */,
 				836D8A471EF1E6D7003BC9DC /* Products */,
 			);
@@ -66,10 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				836D8A5B1EF1E763003BC9DC /* ButtonWheel.swift */,
-				83285C9D1EF49FE300897453 /* ButtonViewBuilder.swift */,
-				83D967171EF742790087F5C3 /* TouchManagement+VectorFuntime.swift */,
-				836D8A491EF1E6D7003BC9DC /* AppDelegate.swift */,
-				836D8A4B1EF1E6D7003BC9DC /* ViewController.swift */,
+				834A51711F02AB2000177D9D /* Extensions and Enums */,
+				834A51701F02AB0000177D9D /* Helpers */,
+				834A516F1F02AAEF00177D9D /* Example App */,
 				836D8A4D1EF1E6D7003BC9DC /* Main.storyboard */,
 				832EEA6A1EF811FD001AA00E /* EighthNoteImg.png */,
 				836D8A501EF1E6D7003BC9DC /* Assets.xcassets */,
@@ -157,8 +190,11 @@
 				836D8A5C1EF1E763003BC9DC /* ButtonWheel.swift in Sources */,
 				836D8A5E1EF251B0003BC9DC /* UsefulExtensions.swift in Sources */,
 				836D8A4C1EF1E6D7003BC9DC /* ViewController.swift in Sources */,
-				83D967181EF742790087F5C3 /* TouchManagement+VectorFuntime.swift in Sources */,
+				834A51681F01EE4400177D9D /* Enums.swift in Sources */,
+				834A516E1F02AAB700177D9D /* TouchManagement.swift in Sources */,
+				834A516C1F02AA9C00177D9D /* ImageSizingHandler.swift in Sources */,
 				836D8A4A1EF1E6D7003BC9DC /* AppDelegate.swift in Sources */,
+				834A516A1F02A96F00177D9D /* VectorHelp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
