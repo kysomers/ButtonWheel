@@ -26,9 +26,16 @@ class ButtonWheel : UIView{
     let backgroundView =  UIView()
     var hasDrawn = false
     var delegate : ButtonWheelDelegate?
+    var longestDiagonal : CGFloat = CGFloat.greatestFiniteMagnitude
     
     //Any setter method for this will need to re-call setup
-    public var middleRadius : CGFloat = 0
+    public var middleRadius : CGFloat = 0{
+        
+        didSet{
+            //call custom setup
+        }
+        
+    }
     
     
     
@@ -59,7 +66,7 @@ class ButtonWheel : UIView{
         
         dimensionSize = self.frame.width < self.frame.height ? self.frame.width : self.frame.height
         
-        self.middleRadius = dimensionSize * MiddleRadiusSize.medium.rawValue
+        self.middleRadius = dimensionSize * MiddleRadiusSize.large.rawValue
         
         
         self.addSubview(backgroundView)
