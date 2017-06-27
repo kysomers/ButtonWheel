@@ -59,7 +59,7 @@ class ButtonWheel : UIView{
         
         dimensionSize = self.frame.width < self.frame.height ? self.frame.width : self.frame.height
         
-        self.middleRadius = dimensionSize / 6
+        self.middleRadius = dimensionSize * MiddleRadiusSize.medium.rawValue
         
         
         self.addSubview(backgroundView)
