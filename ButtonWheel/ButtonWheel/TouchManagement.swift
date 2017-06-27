@@ -1,8 +1,8 @@
 //
-//  TouchManagement+VectorFuntime.swift
+//  TouchManagement.swift
 //  ButtonWheel
 //
-//  Created by Kyle Somers on 6/18/17.
+//  Created by Kyle Somers on 6/27/17.
 //  Copyright © 2017 Kyle Somers. All rights reserved.
 //
 
@@ -26,12 +26,10 @@ struct TouchManagement{
         let index = Int(angle * Double(numberOfButtons) / VectorHelp.twoPi)
         
         return buttonWheel.buttonNames[index]
-
+        
         
     }
     
     
-
+    
 }
-
-
