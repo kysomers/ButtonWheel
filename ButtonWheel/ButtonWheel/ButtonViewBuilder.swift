@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 struct ButtonViewBuilder {
+    
     static func createPiece(buttonWheel : ButtonWheel, color : UIColor, sectionNumber : Int) -> CAShapeLayer{
         let startAngle = CGFloat(Double.pi / -2 +  Double.pi * 2 / Double(buttonWheel.numberOfSections) * Double(sectionNumber))
         let endAngle = CGFloat(Double.pi / -2 +  Double.pi * 2 / Double(buttonWheel.numberOfSections) * Double(sectionNumber + 1))
@@ -40,6 +41,18 @@ struct ButtonViewBuilder {
         buttonWheel.backgroundView.addSubview(imageView)
         
         
+        
+    }
+    static func updateImageSizes(){
+//        center + length * (1,1) >
+//        
+//        while(1){
+//            checkIfTooFar = add (1, height/width) to centerOfImage
+//            if distance(center, checkIfTooFar) > outerDonutRadius || distance(center, checkIfTooFar) < innerDonutRadius{
+//                
+//                
+//            }
+//        }
         
     }
     
