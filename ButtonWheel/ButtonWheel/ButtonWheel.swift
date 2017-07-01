@@ -82,16 +82,15 @@ class ButtonWheel : UIView{
         
     }
     
-    public func setupWith(names : [String], pictureNames : [String]?, colors : [UIColor], buttonNamesWillBeShown : Bool){
+    public func setupWith(names : [String], ButtonPieces : [ButtonPiece], colors : [UIColor]){
         
         if  names.count !=  colors.count{
             return
         }
-        if let pictureNames = pictureNames{
-            if pictureNames.count != names.count{
-                return
-            }
+        if ButtonPieces.count != names.count{
+            return
         }
+        
         else{
             showPictures = false
         }
@@ -109,12 +108,8 @@ class ButtonWheel : UIView{
             buttonNames.append(aName)
             
             
-            var myPicture : String? = nil
-            if let pictureName = pictureNames?[index]{
-                myPicture = pictureName
-            }
-            var buttonImage = UIImage(named: myPicture!)
-            ButtonViewBuilder.addImageToButton(buttonWheel: self, image: buttonImage!, sectionNumber: index)
+            
+            //ButtonViewBuilder.addImageToButton(buttonWheel: self, image: buttonImage!, sectionNumber: index)
             
             
         }
@@ -123,9 +118,7 @@ class ButtonWheel : UIView{
         
     }
     
-    public func setupWith(names : [String], colors : [UIColor], buttonNamesWillBeShown : Bool){
-        setupWith(names: names, pictureNames: nil, colors: colors, buttonNamesWillBeShown : buttonNamesWillBeShown)
-    }
+
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first!

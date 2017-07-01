@@ -14,6 +14,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(colorLiteralRed: 0.157, green: 0.169, blue: 0.208, alpha: 1)
+        
+        
+        
+        
         let buttonNames = ["EighthNoteImg", "EighthNoteImg", "EighthNoteImg", "EighthNoteImg", "EighthNoteImg", "EighthNoteImg", "EighthNoteImg", "EighthNoteImg"]
         let redColor : UIColor = UIColor(colorLiteralRed: 0.91, green: 0.157, blue: 0.255, alpha: 1)
         let orangeColor : UIColor = UIColor(colorLiteralRed: 0.988, green: 0.331, blue: 0.288, alpha: 1)
@@ -28,7 +32,7 @@ class ViewController: UIViewController {
         }
         
 
-        myButtonWheel.setupWith(names: buttonNames, pictureNames: buttonNames, colors: buttonColors, buttonNamesWillBeShown: true)
+        //myButtonWheel.setupWith(names: buttonNames, ButtonPieces: buttonNames, colors: buttonColors)
         myButtonWheel.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
     }

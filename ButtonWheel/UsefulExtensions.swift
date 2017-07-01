@@ -11,6 +11,8 @@ import UIKit
 
 extension CGRect {
     
+    
+    
     mutating func setCenter(_ point : CGPoint){
         self.origin = CGPoint(x: point.x - self.width / 2, y: point.y - self.height / 2)
     }
