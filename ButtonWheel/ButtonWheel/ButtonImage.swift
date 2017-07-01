@@ -18,30 +18,30 @@ public struct ButtonPiece {
     var name : String
     var color : UIColor
 
-    init(name : String, color : UIColor) {
+    init(name : String, color : UIColor, centerOffset : CGPoint) {
         self.name = name
         self.color = color
         self.backgroundView = UIView()
+        self.offsetFromDefaultCenter = centerOffset
+
         
     }
     
-    mutating func setImage(image: UIImage, imageViewSize : CGSize, centerOffset : CGPoint){
+    mutating func setImage(image: UIImage, imageViewSize : CGSize){
         imageView = UIImageView(image: image)
         imageView?.frame = CGRect(x: 0, y: 0, width: imageViewSize.width, height: imageViewSize.height)
-        self.offsetFromDefaultCenter = centerOffset
         
         configureSubviews()
     }
     
-    mutating func setLabel(labelWidth : CGFloat, labelFont : UIFont, labelColor : UIColor, centerOffset : CGPoint){
+    mutating func setLabel(maxLabelWidth : CGFloat, labelFont : UIFont, textColor : UIColor){
         nameLabel = UILabel()
         nameLabel?.text = self.name
-        nameLabel?.textColor = labelColor
+        nameLabel?.textColor = textColor
         nameLabel?.font = labelFont
         nameLabel?.numberOfLines = 0
-        nameLabel?.frame.size = CGSize(width: labelWidth, height: 0)
+        nameLabel?.frame.size = CGSize(width: maxLabelWidth, height: 0)
         nameLabel?.sizeToFit()
-        self.offsetFromDefaultCenter = centerOffset
         
         configureSubviews()
     }

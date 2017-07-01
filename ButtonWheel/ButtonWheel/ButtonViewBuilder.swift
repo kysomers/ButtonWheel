@@ -34,11 +34,15 @@ struct ButtonViewBuilder {
         
         return shapeLayer
     }
-    static func addImageToButton(buttonWheel : ButtonWheel, image : UIImage, sectionNumber : Int){
-        let imageView = UIImageView(frame: VectorHelp.getLabelFrameForPiece(buttonWheel: buttonWheel, sectionNumber: sectionNumber))
-        imageView.image = image
+    static func addButtonBackgroundViewToButton(buttonWheel : ButtonWheel, buttonPiece : ButtonPiece, sectionNumber : Int){
+        //let imageView = UIImageView(frame: VectorHelp.getLabelFrameForPiece(buttonWheel: buttonWheel, sectionNumber: sectionNumber))
+       // imageView.image = image
         //imageView.backgroundColor = UIColor.purple
-        buttonWheel.backgroundView.addSubview(imageView)
+        var pieceCenter = VectorHelp.getCenterOfPiece(buttonWheel: buttonWheel, sectionNumber: sectionNumber)
+        print(pieceCenter)
+        buttonPiece.backgroundView.frame.setCenter(CGPoint(x: pieceCenter.x + buttonPiece.offsetFromDefaultCenter.x, y: pieceCenter.y + buttonPiece.offsetFromDefaultCenter.y))
+        
+        buttonWheel.backgroundView.addSubview(buttonPiece.backgroundView)
         
         
         

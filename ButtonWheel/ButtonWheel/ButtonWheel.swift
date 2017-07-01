@@ -15,30 +15,16 @@ protocol ButtonWheelDelegate{
 
 class ButtonWheel : UIView{
     
+    //border color would be something to add
     var shapes = [CAShapeLayer]()
     var buttonNames = [String]()
-    var borderColor  = UIColor.blue
-    var middleColor = UIColor.clear
     var numberOfSections = 0
     var dimensionSize : CGFloat = 0
-    var showNames = true
-    var showPictures = true
+
     let backgroundView =  UIView()
-    var hasDrawn = false
     var delegate : ButtonWheelDelegate?
-    var longestDiagonal : CGFloat = CGFloat.greatestFiniteMagnitude
-    
-    //Any setter method for this will need to re-call setup
-    public var middleRadius : CGFloat = 0{
-        
-        didSet{
-            //call custom setup
-        }
-        
-    }
-    
-    
-    
+    var middleRadius : CGFloat = 0
+
     required init?(coder aDecoder: NSCoder) {
         
         super.init(coder: aDecoder)
@@ -70,7 +56,7 @@ class ButtonWheel : UIView{
         
         
         self.addSubview(backgroundView)
-        backgroundView.backgroundColor = middleColor
+        backgroundView.backgroundColor = .clear
         backgroundView.frame.size = CGSize(width: dimensionSize, height: dimensionSize)
         backgroundView.frame.setCenter(CGPoint(x: frame.width / 2, y: frame.height / 2))
         backgroundView.layer.cornerRadius = dimensionSize / 2
@@ -82,39 +68,28 @@ class ButtonWheel : UIView{
         
     }
     
-    public func setupWith(names : [String], ButtonPieces : [ButtonPiece], colors : [UIColor]){
+    public func setupWith(buttonPieces : [ButtonPiece], middleRadius : MiddleRadiusSize){
         
-        if  names.count !=  colors.count{
-            return
-        }
-        if ButtonPieces.count != names.count{
-            return
-        }
-        
-        else{
-            showPictures = false
+
+        self.middleRadius = dimensionSize * middleRadius.rawValue
+        self.numberOfSections = buttonPieces.count
+        for aSubview in backgroundView.subviews{
+            aSubview.removeFromSuperview()
         }
         
-        self.numberOfSections = names.count
-        
-        for (index, aName) in names.enumerated(){
+        for (index, aButtonPiece) in buttonPieces.enumerated(){
             
-            let newPiece = ButtonViewBuilder.createPiece(buttonWheel: self, color: colors[index], sectionNumber: index)
-            backgroundView.layer.addSublayer(newPiece)
-            shapes.append(newPiece)
-            
-           // print(VectorHelp.getCenterOfPiece(buttonWheel: self, sectionNumber: index)) //Doesn't go here, just for testing
-            
-            buttonNames.append(aName)
+            let newPieceLayer = ButtonViewBuilder.createPiece(buttonWheel: self, color: aButtonPiece.color, sectionNumber: index)
+            backgroundView.layer.addSublayer(newPieceLayer)
+            shapes.append(newPieceLayer)
             
             
-            
-            //ButtonViewBuilder.addImageToButton(buttonWheel: self, image: buttonImage!, sectionNumber: index)
+            buttonNames.append(aButtonPiece.name)
+            ButtonViewBuilder.addButtonBackgroundViewToButton(buttonWheel: self, buttonPiece: aButtonPiece, sectionNumber: index)
             
             
         }
-        
-        
+ 
         
     }
     
