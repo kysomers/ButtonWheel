@@ -25,6 +25,7 @@ class ButtonWheel : UIView{
     var delegate : ButtonWheelDelegate?
     var middleRadius : CGFloat = 0
 
+
     required init?(coder aDecoder: NSCoder) {
         
         super.init(coder: aDecoder)
@@ -78,6 +79,7 @@ class ButtonWheel : UIView{
         }
         
         for (index, aButtonPiece) in buttonPieces.enumerated(){
+
             
             let newPieceLayer = ButtonViewBuilder.createPiece(buttonWheel: self, color: aButtonPiece.color, sectionNumber: index)
             backgroundView.layer.addSublayer(newPieceLayer)
@@ -86,6 +88,7 @@ class ButtonWheel : UIView{
             
             buttonNames.append(aButtonPiece.name)
             ButtonViewBuilder.addButtonBackgroundViewToButton(buttonWheel: self, buttonPiece: aButtonPiece, sectionNumber: index)
+
             
             
         }
