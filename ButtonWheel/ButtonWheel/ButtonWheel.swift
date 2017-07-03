@@ -24,6 +24,7 @@ class ButtonWheel : UIView{
     let backgroundView =  UIView()
     var delegate : ButtonWheelDelegate?
     var middleRadius : CGFloat = 0
+    var middleRadiusSetting : MiddleRadiusSize = .medium
 
 
     required init?(coder aDecoder: NSCoder) {
@@ -71,8 +72,8 @@ class ButtonWheel : UIView{
     
     public func setupWith(buttonPieces : [ButtonPiece], middleRadius : MiddleRadiusSize){
         
-
-        self.middleRadius = dimensionSize * middleRadius.rawValue
+        self.middleRadiusSetting = middleRadius
+        self.middleRadius = dimensionSize * middleRadiusSetting.rawValue
         self.numberOfSections = buttonPieces.count
         for aSubview in backgroundView.subviews{
             aSubview.removeFromSuperview()

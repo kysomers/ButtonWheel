@@ -52,8 +52,19 @@ class VectorHelp {
     }
     
     static func getCenterOfPiece(buttonWheel : ButtonWheel, sectionNumber : Int) -> CGPoint{
+        var distance : Double = 0
         
-        let distance = Double(buttonWheel.dimensionSize / 2 - (buttonWheel.dimensionSize / 2 - buttonWheel.middleRadius) / 2)
+        //This doesn't give the true middle for wheels with a small center radius. Instead it looks for a point closer to the outside
+        //where there's more space. More space is ideal for placing the labels and images
+        if buttonWheel.middleRadiusSetting == .small{
+            distance = Double(buttonWheel.dimensionSize / 2 - (buttonWheel.dimensionSize / 2 - buttonWheel.middleRadius) / 2.5)
+
+        }
+        else{
+            distance = Double(buttonWheel.dimensionSize / 2 - (buttonWheel.dimensionSize / 2 - buttonWheel.middleRadius) / 2)
+
+        }
+        
         
         let ratioOfCircleToCenterOfPiece = Double(sectionNumber) / Double(buttonWheel.numberOfSections) + 0.5 / Double(buttonWheel.numberOfSections)
         let angle = twoPi * ratioOfCircleToCenterOfPiece
@@ -61,18 +72,11 @@ class VectorHelp {
         
         
         let uncorrectedCenter = CGPoint(x: cos(tranformedAngle) * distance , y: sin(tranformedAngle) * distance * -1)
+        
+        //Now we need to add in the mid point coordinates to correct
         return CGPoint(x: uncorrectedCenter.x + buttonWheel.backgroundView.frame.midX, y: uncorrectedCenter.y + buttonWheel.backgroundView.frame.midY)
     }
-    /*
-    static func getLabelFrameForPiece(buttonWheel : ButtonWheel, sectionNumber : Int, buttonPiece : ButtonPiece) -> CGRect{
-        //Write stuff in here
-        var labelFrame = CGRect(x: 0, y: 0, width: 50, height: 50)
-        labelFrame.setCenter(getCenterOfPiece(buttonWheel: buttonWheel, sectionNumber: sectionNumber))
-        print(getCenterOfPiece(buttonWheel: buttonWheel, sectionNumber: sectionNumber))
-        print(buttonWheel.backgroundView.frame.midX)
-        return labelFrame
-    }
-    */
+
 
     
 }

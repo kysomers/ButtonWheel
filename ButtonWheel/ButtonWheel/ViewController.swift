@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor(colorLiteralRed: 0.157, green: 0.169, blue: 0.208, alpha: 1)
 
-        myButtonWheel.setupWith(buttonPieces: makeButtonArray(), middleRadius: .medium)
+        myButtonWheel.setupWith(buttonPieces: makeButtonArray(), middleRadius: .small)
 
         myButtonWheel.delegate = self
     }
