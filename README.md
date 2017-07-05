@@ -11,14 +11,14 @@ ButtonWheel lets you create a circular collection of buttons. It's recommended f
 
 ButtonWheel inherits from UIView. It can be instantiated either in storyboard or programmatically with the methods above from its superclass.
 
-`ButtonWheel.setupWith(buttonPieces : [ButtonPiece], middleRadius : MiddleRadiusSize)`
+`func setupWith(buttonPieces : [ButtonPiece], middleRadius : MiddleRadiusSize)`
 
 A setup function that must be called after initialization to build the view according to how it should look. The `middleRadius` parameter controls how big the hole in the middle of the wheel will be. `MiddleRadiusSize` is an enum with the cases `.small`, `.medium`, and `.large`. `buttonPieces` takes in an array of `ButtonPiece` which is a type that we will use to construct each section of the ButtonWheel.
 
 #### ButtonWheelDelegate
 
 
-`didTapButtonWheelAtName(name : String)`
+`func didTapButtonWheelAtName(name : String)`
 
 This is the function that will be called in the ButtonWheel's delegate to handle the buttons being pressed. The parameter passed into the function will be the name that you assigned to the tapped button.
 
@@ -26,4 +26,13 @@ This is the function that will be called in the ButtonWheel's delegate to handle
 
 `init(name : String, color : UIColor, centerOffset : CGPoint)`
 
-Each ButtonPiece must be given a name, which will correspond to the label if you decide to add one using `setLabel(...)`. The name will also match the name that is passed into `didTapButtonWheelAtName(name : String)` when it is called in the ButtonWheel's delegate. The `color` parameter is going to be the background color for the button, and `centerOffset` WillASDFASDFASDFASDFASDFASDFASDFA SDFASDFOJASJDFASKLDFALSDFLASDFLJASDFLJASLDFJASLDF
+Each ButtonPiece must be given a name, which will correspond to the label if you decide to add one using `setLabel(...)`. The name will also match the name that is passed into `didTapButtonWheelAtName(name : String)` when it is called in the ButtonWheel's delegate. The `color` parameter is going to be the background color for the button, and `centerOffset` will allow the user to move the image and label from its default position on the ButtonPiece.
+
+`func setImage(image: UIImage, imageViewSize : CGSize)`
+
+This sets an image, which will appear on the ButtonPiece when the ButtonWheel is set up with that piece. The two parameters correspond to the image itself and the size you want to set for it. Calling this after `setLabel(...)` won't replace the label, instead it will add the image along with the label.
+
+`func setLabel(maxLabelWidth : CGFloat, labelFont : UIFont, textColor : UIColor)`
+
+This sets a label, which will appear on the ButtonPiece when the ButtonWheel is set up with that piece. The parameters respectively correspond to the maximum width the label should have, the font for the label, and the label's text color. Calling this after `setImage(...)` won't replace the image, instead it will add the label along with the image.
+
