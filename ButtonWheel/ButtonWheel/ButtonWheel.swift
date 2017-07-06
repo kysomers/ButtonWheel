@@ -17,6 +17,7 @@ class ButtonWheel : UIView{
     
     //border color would be something to add
     var shapes = [CAShapeLayer]()
+    var buttonPieces = [ButtonPiece]()
     var buttonNames = [String]()
     var numberOfSections = 0
     var dimensionSize : CGFloat = 0
@@ -71,7 +72,9 @@ class ButtonWheel : UIView{
     }
     
     public func setupWith(buttonPieces : [ButtonPiece], middleRadius : MiddleRadiusSize){
+        destroy()
         
+        self.buttonPieces = buttonPieces
         self.middleRadiusSetting = middleRadius
         self.middleRadius = dimensionSize * middleRadiusSetting.rawValue
         self.numberOfSections = buttonPieces.count
@@ -97,6 +100,18 @@ class ButtonWheel : UIView{
         
     }
     
+    func destroy(){
+        for aPiece in buttonPieces{
+            aPiece.backgroundView.removeFromSuperview()
+        }
+        buttonPieces = []
+        
+        for aShape in shapes{
+            aShape.removeFromSuperlayer()
+        }
+        shapes = []
+    }
+    
 
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -111,6 +126,8 @@ class ButtonWheel : UIView{
         delegate?.didTapButtonWheelAtName(name: unwrappedButtonName)
         
     }
+    
+    
     
     
     

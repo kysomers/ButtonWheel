@@ -14,8 +14,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(colorLiteralRed: 0.157, green: 0.169, blue: 0.208, alpha: 1)
+        let buttonNames = ["Button 1", "Button 2", "Button 3", "Button 4", "Button 5", "Button 6", "Button 7", "Button 8"]
+        let buttonNames2 = ["Button 3", "Button 24", "Button 43", "Button 4wer", "Buttweon 5", "But6ton 8"]
 
-        myButtonWheel.setupWith(buttonPieces: makeButtonArray(), middleRadius: .small)
+        myButtonWheel.setupWith(buttonPieces: makeButtonArray(names: buttonNames), middleRadius: .large)
+        myButtonWheel.setupWith(buttonPieces: makeButtonArray(names: buttonNames2), middleRadius: .medium)
+
 
         myButtonWheel.delegate = self
     }
@@ -27,7 +31,7 @@ class ViewController: UIViewController {
     
     
     //This is an example of how we could make an array of orange and red button pieces with whatever names and labels we want
-    func makeButtonArray() -> [ButtonPiece]{
+    func makeButtonArray(names : [String]) -> [ButtonPiece]{
         
         let redColor : UIColor = UIColor(colorLiteralRed: 0.91, green: 0.157, blue: 0.255, alpha: 1)
         let orangeColor : UIColor = UIColor(colorLiteralRed: 0.988, green: 0.331, blue: 0.288, alpha: 1)
@@ -35,14 +39,15 @@ class ViewController: UIViewController {
         let buttonImageNames = ["EighthNoteImg", "EighthNoteImg", "EighthNoteImg", "EighthNoteImg", "EighthNoteImg", "EighthNoteImg", "EighthNoteImg", "EighthNoteImg"]
         let imageSize = CGSize(width: 50, height: 50)
         
-        let buttonNames = ["Button 1", "Button 2", "Button 3", "Button 4", "Button 5", "Button 6", "Button 7", "Button 8"]
+        
+
         let myFont = UIFont(name: "Avenir", size: 12)
         let fontColor = UIColor.black
         let labelLength : CGFloat = 50
         
         var buttonArray : [ButtonPiece] = []
         
-        for (index, aName) in buttonNames.enumerated(){
+        for (index, aName) in names.enumerated(){
             var myColor = UIColor()
             if index % 2 == 1{
                 myColor = redColor
@@ -53,7 +58,7 @@ class ViewController: UIViewController {
             var newButton = ButtonPiece(name: aName, color: myColor, centerOffset: CGPoint(x: 0, y: 0))
             
             
-            if let myImage = UIImage(named: buttonImageNames[index]){
+            if let myImage = UIImage(named: "EighthNoteImg"){
                 newButton.setImage(image: myImage, imageViewSize:imageSize)
 
             }
