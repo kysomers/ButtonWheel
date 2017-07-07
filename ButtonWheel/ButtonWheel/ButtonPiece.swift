@@ -27,11 +27,16 @@ public struct ButtonPiece {
         
     }
     
-    mutating func setImage(image: UIImage, imageViewSize : CGSize){
+    mutating func setImage(image: UIImage, imageViewSize : CGSize, tintColor : UIColor?){
         if let imageView = self.imageView{
             imageView.removeFromSuperview()
         }
+
         imageView = UIImageView(image: image)
+        
+        if let tintColor = tintColor{
+            imageView?.tintColor = tintColor
+        }
         imageView?.frame = CGRect(x: 0, y: 0, width: imageViewSize.width, height: imageViewSize.height)
         
         configureSubviews()

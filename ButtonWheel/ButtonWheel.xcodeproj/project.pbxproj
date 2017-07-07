@@ -21,6 +21,12 @@
 		836D8A5C1EF1E763003BC9DC /* ButtonWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D8A5B1EF1E763003BC9DC /* ButtonWheel.swift */; };
 		836D8A5E1EF251B0003BC9DC /* UsefulExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D8A5D1EF251B0003BC9DC /* UsefulExtensions.swift */; };
 		83794A921F0D426400706632 /* ButtonPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83794A911F0D426400706632 /* ButtonPiece.swift */; };
+		83A4BC841F0F1CDA00CC050D /* Squid.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A4BC7F1F0F1CDA00CC050D /* Squid.png */; };
+		83A4BC851F0F1CDA00CC050D /* Monster.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A4BC801F0F1CDA00CC050D /* Monster.png */; };
+		83A4BC861F0F1CDA00CC050D /* Cyclops.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A4BC811F0F1CDA00CC050D /* Cyclops.png */; };
+		83A4BC871F0F1CDA00CC050D /* Ghost.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A4BC821F0F1CDA00CC050D /* Ghost.png */; };
+		83A4BC881F0F1CDA00CC050D /* Demon.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A4BC831F0F1CDA00CC050D /* Demon.png */; };
+		83A4BC8A1F0F1DAC00CC050D /* Insectiod.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A4BC891F0F1DAC00CC050D /* Insectiod.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +46,12 @@
 		836D8A5B1EF1E763003BC9DC /* ButtonWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonWheel.swift; sourceTree = "<group>"; };
 		836D8A5D1EF251B0003BC9DC /* UsefulExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsefulExtensions.swift; path = ../UsefulExtensions.swift; sourceTree = "<group>"; };
 		83794A911F0D426400706632 /* ButtonPiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonPiece.swift; sourceTree = "<group>"; };
+		83A4BC7F1F0F1CDA00CC050D /* Squid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Squid.png; sourceTree = "<group>"; };
+		83A4BC801F0F1CDA00CC050D /* Monster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Monster.png; sourceTree = "<group>"; };
+		83A4BC811F0F1CDA00CC050D /* Cyclops.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cyclops.png; sourceTree = "<group>"; };
+		83A4BC821F0F1CDA00CC050D /* Ghost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ghost.png; sourceTree = "<group>"; };
+		83A4BC831F0F1CDA00CC050D /* Demon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Demon.png; sourceTree = "<group>"; };
+		83A4BC891F0F1DAC00CC050D /* Insectiod.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Insectiod.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +119,12 @@
 				834A51701F02AB0000177D9D /* Helpers */,
 				834A516F1F02AAEF00177D9D /* Example App */,
 				836D8A4D1EF1E6D7003BC9DC /* Main.storyboard */,
+				83A4BC7F1F0F1CDA00CC050D /* Squid.png */,
+				83A4BC891F0F1DAC00CC050D /* Insectiod.png */,
+				83A4BC801F0F1CDA00CC050D /* Monster.png */,
+				83A4BC811F0F1CDA00CC050D /* Cyclops.png */,
+				83A4BC821F0F1CDA00CC050D /* Ghost.png */,
+				83A4BC831F0F1CDA00CC050D /* Demon.png */,
 				832EEA6A1EF811FD001AA00E /* EighthNoteImg.png */,
 				836D8A501EF1E6D7003BC9DC /* Assets.xcassets */,
 				836D8A521EF1E6D7003BC9DC /* LaunchScreen.storyboard */,
@@ -176,8 +194,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				832EEA6B1EF811FD001AA00E /* EighthNoteImg.png in Resources */,
+				83A4BC871F0F1CDA00CC050D /* Ghost.png in Resources */,
+				83A4BC841F0F1CDA00CC050D /* Squid.png in Resources */,
 				836D8A541EF1E6D7003BC9DC /* LaunchScreen.storyboard in Resources */,
 				836D8A511EF1E6D7003BC9DC /* Assets.xcassets in Resources */,
+				83A4BC881F0F1CDA00CC050D /* Demon.png in Resources */,
+				83A4BC861F0F1CDA00CC050D /* Cyclops.png in Resources */,
+				83A4BC851F0F1CDA00CC050D /* Monster.png in Resources */,
+				83A4BC8A1F0F1DAC00CC050D /* Insectiod.png in Resources */,
 				836D8A4F1EF1E6D7003BC9DC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
