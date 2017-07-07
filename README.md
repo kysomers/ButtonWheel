@@ -2,6 +2,8 @@
 
 ButtonWheel lets you create a circular collection of buttons. It's recommended for use whenever an app would want to give a lot of options or centralized navigation with a sleek, modern look. It allows for customization on images and labels for the buttons as well as more basic attributes like color, dimension, and shape.
 
+<img src="http://i.imgur.com/FSdk7kE.png" width="250">
+
 
 ## Use
 
@@ -28,9 +30,9 @@ This is the function that will be called in the ButtonWheel's delegate to handle
 
 Each ButtonPiece must be given a name, which will correspond to the label if you decide to add one using `setLabel(...)`. The name will also match the name that is passed into `didTapButtonWheelAtName(name : String)` when it is called in the ButtonWheel's delegate. The `color` parameter is going to be the background color for the button, and `centerOffset` will allow the user to move the image and label from its default position on the ButtonPiece.
 
-`func setImage(image: UIImage, imageViewSize : CGSize)`
+`func setImage(image: UIImage, imageViewSize : CGSize, tintColor : UIColor?)`
 
-This sets an image, which will appear on the ButtonPiece when the ButtonWheel is set up with that piece. The two parameters correspond to the image itself and the size you want to set for it. Calling this after `setLabel(...)` won't replace the label, instead it will add the image along with the label.
+This sets an image, which will appear on the ButtonPiece when the ButtonWheel is set up with that piece. The parameters correspond respectively to the image itself, the size you want to set for it, and the tint color for the image. If you don't want to have a tint color, you can set this parameter to `nil`. Calling this after `setLabel(...)` won't replace the label, instead it will add the image along with the label.
 
 `func setLabel(maxLabelWidth : CGFloat, labelFont : UIFont, textColor : UIColor)`
 
