@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-protocol ButtonWheelDelegate{
+public protocol ButtonWheelDelegate{
     func didTapButtonWheelAtName(name : String)
 }
 
-class ButtonWheel : UIView{
+public class ButtonWheel : UIView{
     
     //border color would be something to add
     var shapes = [CAShapeLayer]()
@@ -28,7 +28,7 @@ class ButtonWheel : UIView{
     var middleRadiusSetting : MiddleRadiusSize = .medium
 
 
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         
         super.init(coder: aDecoder)
         configureBackgroundView()
@@ -41,7 +41,7 @@ class ButtonWheel : UIView{
 
     }
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         configureBackgroundView()
 
@@ -114,7 +114,7 @@ class ButtonWheel : UIView{
     
 
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first!
         let tappedPoint = touch.location(in: self)
         let buttonName = TouchManagement.getNameFromPoint(buttonWheel: self, tappedPoint: tappedPoint)

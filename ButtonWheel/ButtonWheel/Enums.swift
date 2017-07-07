@@ -9,6 +9,6 @@
 import Foundation
 import UIKit
 
-enum MiddleRadiusSize : CGFloat{
-    case small = 0.14, medium = 0.22, large = 0.3
+public enum MiddleRadiusSize : CGFloat{
+    case small = 0.14, medium = 0.22, large = 0.28
 }

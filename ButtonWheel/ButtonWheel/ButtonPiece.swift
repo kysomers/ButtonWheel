@@ -12,13 +12,13 @@ import UIKit
 public struct ButtonPiece {
     
     var offsetFromDefaultCenter = CGPoint(x: 0, y: 0)
-    private var nameLabel : UILabel?
-    private var imageView : UIImageView?
+    var nameLabel : UILabel?
+    var imageView : UIImageView?
     var backgroundView : UIView
     var name : String
     var color : UIColor
     
-    init(name : String, color : UIColor, centerOffset : CGPoint) {
+    public init(name : String, color : UIColor, centerOffset : CGPoint) {
         self.name = name
         self.color = color
         self.backgroundView = UIView()
@@ -27,7 +27,7 @@ public struct ButtonPiece {
         
     }
     
-    mutating func setImage(image: UIImage, imageViewSize : CGSize, tintColor : UIColor?){
+    public mutating func setImage(image: UIImage, imageViewSize : CGSize, tintColor : UIColor?){
         if let imageView = self.imageView{
             imageView.removeFromSuperview()
         }
@@ -42,7 +42,7 @@ public struct ButtonPiece {
         configureSubviews()
     }
     
-    mutating func setLabel(maxLabelWidth : CGFloat, labelFont : UIFont, textColor : UIColor){
+    public mutating func setLabel(maxLabelWidth : CGFloat, labelFont : UIFont, textColor : UIColor){
         if let nameLabel = self.nameLabel{
             nameLabel.removeFromSuperview()
         }

@@ -11,7 +11,7 @@ import UIKit
 
 class VectorHelp {
     
-    public static let twoPi = Double.pi * 2
+    static let twoPi = Double.pi * 2
     
     
     static func angleFromPoints(centerPoint : CGPoint, tappedPoint : CGPoint) -> Double{
