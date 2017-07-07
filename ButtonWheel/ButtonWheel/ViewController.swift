@@ -11,11 +11,18 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var myButtonWheel: ButtonWheel!
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(colorLiteralRed: 0.157, green: 0.169, blue: 0.208, alpha: 1)
 
-        myButtonWheel.setupWith(buttonPieces: makeButtonArray(), middleRadius: .small)
+        myButtonWheel.setupWith(buttonPieces: makeButtonArray(), middleRadius: .medium)
+
+
 
         myButtonWheel.delegate = self
     }
@@ -32,13 +39,16 @@ class ViewController: UIViewController {
         let redColor : UIColor = UIColor(colorLiteralRed: 0.91, green: 0.157, blue: 0.255, alpha: 1)
         let orangeColor : UIColor = UIColor(colorLiteralRed: 0.988, green: 0.331, blue: 0.288, alpha: 1)
         
-        let buttonImageNames = ["EighthNoteImg", "EighthNoteImg", "EighthNoteImg", "EighthNoteImg", "EighthNoteImg", "EighthNoteImg", "EighthNoteImg", "EighthNoteImg"]
-        let imageSize = CGSize(width: 50, height: 50)
+        let buttonImageNames = ["Squid", "Monster", "Cyclops", "Ghost", "Demon", "Insectiod"]
+        let buttonNames = ["Leviathan", "Old One", "Cyclops", "Ghost", "Demon", "Insectiod"]
+
+        let imageSize = CGSize(width: 45, height: 45)
         
-        let buttonNames = ["Button 1", "Button 2", "Button 3", "Button 4", "Button 5", "Button 6", "Button 7", "Button 8"]
+        
+
         let myFont = UIFont(name: "Avenir", size: 12)
-        let fontColor = UIColor.black
-        let labelLength : CGFloat = 50
+        let fontColor = UIColor.white
+        let labelLength : CGFloat = 55
         
         var buttonArray : [ButtonPiece] = []
         
@@ -54,7 +64,7 @@ class ViewController: UIViewController {
             
             
             if let myImage = UIImage(named: buttonImageNames[index]){
-                newButton.setImage(image: myImage, imageViewSize:imageSize)
+                newButton.setImage(image: myImage.withRenderingMode(.alwaysTemplate), imageViewSize:imageSize, tintColor : UIColor.white)
 
             }
             else{

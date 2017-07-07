@@ -1,5 +1,5 @@
 //
-//  ButtonImage.swift
+//  ButtonPiece.swift
 //  ButtonWheel
 //
 //  Created by Kyle Somers on 6/28/17.
@@ -17,24 +17,35 @@ public struct ButtonPiece {
     var backgroundView : UIView
     var name : String
     var color : UIColor
-
+    
     init(name : String, color : UIColor, centerOffset : CGPoint) {
         self.name = name
         self.color = color
         self.backgroundView = UIView()
         self.offsetFromDefaultCenter = centerOffset
-
+        
         
     }
     
-    mutating func setImage(image: UIImage, imageViewSize : CGSize){
+    mutating func setImage(image: UIImage, imageViewSize : CGSize, tintColor : UIColor?){
+        if let imageView = self.imageView{
+            imageView.removeFromSuperview()
+        }
+
         imageView = UIImageView(image: image)
+        
+        if let tintColor = tintColor{
+            imageView?.tintColor = tintColor
+        }
         imageView?.frame = CGRect(x: 0, y: 0, width: imageViewSize.width, height: imageViewSize.height)
         
         configureSubviews()
     }
     
     mutating func setLabel(maxLabelWidth : CGFloat, labelFont : UIFont, textColor : UIColor){
+        if let nameLabel = self.nameLabel{
+            nameLabel.removeFromSuperview()
+        }
         nameLabel = UILabel()
         nameLabel?.text = self.name
         nameLabel?.textColor = textColor
@@ -63,21 +74,21 @@ public struct ButtonPiece {
             backgroundView.addSubview(nameLabel)
             
         }
-        
+            
         else if let imageView = imageView{
             imageView.frame = CGRect(origin: CGPoint(x: offsetFromDefaultCenter.x, y: offsetFromDefaultCenter.y), size: imageView.frame.size)
             backgroundView.frame = imageView.frame
             backgroundView.addSubview(imageView)
         }
-        
+            
         else if let nameLabel = nameLabel{
             nameLabel.frame = CGRect(origin: CGPoint(x: offsetFromDefaultCenter.x, y: offsetFromDefaultCenter.y), size: nameLabel.frame.size)
             backgroundView.frame = nameLabel.frame
             backgroundView.addSubview(nameLabel)
         }
     }
-
-        
+    
+    
     
     
 }

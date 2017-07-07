@@ -35,10 +35,8 @@ struct ButtonViewBuilder {
         return shapeLayer
     }
     static func addButtonBackgroundViewToButton(buttonWheel : ButtonWheel, buttonPiece : ButtonPiece, sectionNumber : Int){
-        //let imageView = UIImageView(frame: VectorHelp.getLabelFrameForPiece(buttonWheel: buttonWheel, sectionNumber: sectionNumber))
-       // imageView.image = image
-        //imageView.backgroundColor = UIColor.purple
-        var pieceCenter = VectorHelp.getCenterOfPiece(buttonWheel: buttonWheel, sectionNumber: sectionNumber)
+
+        let pieceCenter = VectorHelp.getCenterOfPiece(buttonWheel: buttonWheel, sectionNumber: sectionNumber)
         print(pieceCenter)
         buttonPiece.backgroundView.frame.setCenter(CGPoint(x: pieceCenter.x + buttonPiece.offsetFromDefaultCenter.x, y: pieceCenter.y + buttonPiece.offsetFromDefaultCenter.y))
         
@@ -48,22 +46,9 @@ struct ButtonViewBuilder {
         
         
     }
-    static func updateImageSizes(){
-//        center + length * (1,1) >
-//        
-//        while(1){
-//            checkIfTooFar = add (1, height/width) to centerOfImage
-//            if distance(center, checkIfTooFar) > outerDonutRadius || distance(center, checkIfTooFar) < innerDonutRadius{
-//                
-//                
-//            }
-//        }
-        
-    }
+
     
-    static func destroyView(){
-        //fill this in for method to handle button getting destroyed for if it gets reset
-    }
+
 }
 
 
