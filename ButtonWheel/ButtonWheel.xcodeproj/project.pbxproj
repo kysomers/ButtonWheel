@@ -7,20 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		83285C9E1EF49FE300897453 /* ButtonViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83285C9D1EF49FE300897453 /* ButtonViewBuilder.swift */; };
-		832EEA6B1EF811FD001AA00E /* EighthNoteImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 832EEA6A1EF811FD001AA00E /* EighthNoteImg.png */; };
-		834A51681F01EE4400177D9D /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A51671F01EE4400177D9D /* Enums.swift */; };
-		834A516A1F02A96F00177D9D /* VectorHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A51691F02A96F00177D9D /* VectorHelp.swift */; };
-		834A516C1F02AA9C00177D9D /* ImageSizingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A516B1F02AA9C00177D9D /* ImageSizingHandler.swift */; };
-		834A516E1F02AAB700177D9D /* TouchManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A516D1F02AAB700177D9D /* TouchManagement.swift */; };
+		83087AD21F15EA1D00415F4B /* ButtonViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83087ACF1F15EA1D00415F4B /* ButtonViewBuilder.swift */; };
+		83087AD31F15EA1D00415F4B /* TouchManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83087AD01F15EA1D00415F4B /* TouchManagement.swift */; };
+		83087AD41F15EA1D00415F4B /* VectorHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83087AD11F15EA1D00415F4B /* VectorHelp.swift */; };
+		83087AD71F15EA3B00415F4B /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83087AD51F15EA3B00415F4B /* Enums.swift */; };
+		83087AD81F15EA3B00415F4B /* UsefulExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83087AD61F15EA3B00415F4B /* UsefulExtensions.swift */; };
+		83087ADB1F15EA4500415F4B /* ButtonPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83087AD91F15EA4500415F4B /* ButtonPiece.swift */; };
+		83087ADC1F15EA4500415F4B /* ButtonWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83087ADA1F15EA4500415F4B /* ButtonWheel.swift */; };
 		836D8A4A1EF1E6D7003BC9DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D8A491EF1E6D7003BC9DC /* AppDelegate.swift */; };
 		836D8A4C1EF1E6D7003BC9DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D8A4B1EF1E6D7003BC9DC /* ViewController.swift */; };
 		836D8A4F1EF1E6D7003BC9DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836D8A4D1EF1E6D7003BC9DC /* Main.storyboard */; };
 		836D8A511EF1E6D7003BC9DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836D8A501EF1E6D7003BC9DC /* Assets.xcassets */; };
 		836D8A541EF1E6D7003BC9DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836D8A521EF1E6D7003BC9DC /* LaunchScreen.storyboard */; };
-		836D8A5C1EF1E763003BC9DC /* ButtonWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D8A5B1EF1E763003BC9DC /* ButtonWheel.swift */; };
-		836D8A5E1EF251B0003BC9DC /* UsefulExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D8A5D1EF251B0003BC9DC /* UsefulExtensions.swift */; };
-		83794A921F0D426400706632 /* ButtonPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83794A911F0D426400706632 /* ButtonPiece.swift */; };
 		83A4BC841F0F1CDA00CC050D /* Squid.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A4BC7F1F0F1CDA00CC050D /* Squid.png */; };
 		83A4BC851F0F1CDA00CC050D /* Monster.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A4BC801F0F1CDA00CC050D /* Monster.png */; };
 		83A4BC861F0F1CDA00CC050D /* Cyclops.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A4BC811F0F1CDA00CC050D /* Cyclops.png */; };
@@ -30,12 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		83285C9D1EF49FE300897453 /* ButtonViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewBuilder.swift; sourceTree = "<group>"; };
-		832EEA6A1EF811FD001AA00E /* EighthNoteImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EighthNoteImg.png; sourceTree = "<group>"; };
-		834A51671F01EE4400177D9D /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
-		834A51691F02A96F00177D9D /* VectorHelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorHelp.swift; sourceTree = "<group>"; };
-		834A516B1F02AA9C00177D9D /* ImageSizingHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageSizingHandler.swift; path = ../ImageSizingHandler.swift; sourceTree = "<group>"; };
-		834A516D1F02AAB700177D9D /* TouchManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchManagement.swift; sourceTree = "<group>"; };
+		83087ACF1F15EA1D00415F4B /* ButtonViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonViewBuilder.swift; path = PodFiles/ButtonViewBuilder.swift; sourceTree = "<group>"; };
+		83087AD01F15EA1D00415F4B /* TouchManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchManagement.swift; path = PodFiles/TouchManagement.swift; sourceTree = "<group>"; };
+		83087AD11F15EA1D00415F4B /* VectorHelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VectorHelp.swift; path = PodFiles/VectorHelp.swift; sourceTree = "<group>"; };
+		83087AD51F15EA3B00415F4B /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Enums.swift; path = PodFiles/Enums.swift; sourceTree = "<group>"; };
+		83087AD61F15EA3B00415F4B /* UsefulExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsefulExtensions.swift; path = PodFiles/UsefulExtensions.swift; sourceTree = "<group>"; };
+		83087AD91F15EA4500415F4B /* ButtonPiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonPiece.swift; path = PodFiles/ButtonPiece.swift; sourceTree = "<group>"; };
+		83087ADA1F15EA4500415F4B /* ButtonWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonWheel.swift; path = PodFiles/ButtonWheel.swift; sourceTree = "<group>"; };
 		836D8A461EF1E6D7003BC9DC /* ButtonWheel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButtonWheel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		836D8A491EF1E6D7003BC9DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		836D8A4B1EF1E6D7003BC9DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,9 +42,6 @@
 		836D8A501EF1E6D7003BC9DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		836D8A531EF1E6D7003BC9DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		836D8A551EF1E6D7003BC9DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		836D8A5B1EF1E763003BC9DC /* ButtonWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonWheel.swift; sourceTree = "<group>"; };
-		836D8A5D1EF251B0003BC9DC /* UsefulExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsefulExtensions.swift; path = ../UsefulExtensions.swift; sourceTree = "<group>"; };
-		83794A911F0D426400706632 /* ButtonPiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonPiece.swift; sourceTree = "<group>"; };
 		83A4BC7F1F0F1CDA00CC050D /* Squid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Squid.png; sourceTree = "<group>"; };
 		83A4BC801F0F1CDA00CC050D /* Monster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Monster.png; sourceTree = "<group>"; };
 		83A4BC811F0F1CDA00CC050D /* Cyclops.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cyclops.png; sourceTree = "<group>"; };
@@ -77,10 +73,9 @@
 		834A51701F02AB0000177D9D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				834A516B1F02AA9C00177D9D /* ImageSizingHandler.swift */,
-				83285C9D1EF49FE300897453 /* ButtonViewBuilder.swift */,
-				834A516D1F02AAB700177D9D /* TouchManagement.swift */,
-				834A51691F02A96F00177D9D /* VectorHelp.swift */,
+				83087ACF1F15EA1D00415F4B /* ButtonViewBuilder.swift */,
+				83087AD01F15EA1D00415F4B /* TouchManagement.swift */,
+				83087AD11F15EA1D00415F4B /* VectorHelp.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -88,8 +83,8 @@
 		834A51711F02AB2000177D9D /* Extensions and Enums */ = {
 			isa = PBXGroup;
 			children = (
-				836D8A5D1EF251B0003BC9DC /* UsefulExtensions.swift */,
-				834A51671F01EE4400177D9D /* Enums.swift */,
+				83087AD51F15EA3B00415F4B /* Enums.swift */,
+				83087AD61F15EA3B00415F4B /* UsefulExtensions.swift */,
 			);
 			name = "Extensions and Enums";
 			sourceTree = "<group>";
@@ -113,8 +108,8 @@
 		836D8A481EF1E6D7003BC9DC /* ButtonWheel */ = {
 			isa = PBXGroup;
 			children = (
-				836D8A5B1EF1E763003BC9DC /* ButtonWheel.swift */,
-				83794A911F0D426400706632 /* ButtonPiece.swift */,
+				83087AD91F15EA4500415F4B /* ButtonPiece.swift */,
+				83087ADA1F15EA4500415F4B /* ButtonWheel.swift */,
 				834A51711F02AB2000177D9D /* Extensions and Enums */,
 				834A51701F02AB0000177D9D /* Helpers */,
 				834A516F1F02AAEF00177D9D /* Example App */,
@@ -125,7 +120,6 @@
 				83A4BC811F0F1CDA00CC050D /* Cyclops.png */,
 				83A4BC821F0F1CDA00CC050D /* Ghost.png */,
 				83A4BC831F0F1CDA00CC050D /* Demon.png */,
-				832EEA6A1EF811FD001AA00E /* EighthNoteImg.png */,
 				836D8A501EF1E6D7003BC9DC /* Assets.xcassets */,
 				836D8A521EF1E6D7003BC9DC /* LaunchScreen.storyboard */,
 				836D8A551EF1E6D7003BC9DC /* Info.plist */,
@@ -193,7 +187,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				832EEA6B1EF811FD001AA00E /* EighthNoteImg.png in Resources */,
 				83A4BC871F0F1CDA00CC050D /* Ghost.png in Resources */,
 				83A4BC841F0F1CDA00CC050D /* Squid.png in Resources */,
 				836D8A541EF1E6D7003BC9DC /* LaunchScreen.storyboard in Resources */,
@@ -213,16 +206,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83285C9E1EF49FE300897453 /* ButtonViewBuilder.swift in Sources */,
-				836D8A5C1EF1E763003BC9DC /* ButtonWheel.swift in Sources */,
-				836D8A5E1EF251B0003BC9DC /* UsefulExtensions.swift in Sources */,
+				83087AD31F15EA1D00415F4B /* TouchManagement.swift in Sources */,
 				836D8A4C1EF1E6D7003BC9DC /* ViewController.swift in Sources */,
-				834A51681F01EE4400177D9D /* Enums.swift in Sources */,
-				834A516E1F02AAB700177D9D /* TouchManagement.swift in Sources */,
-				83794A921F0D426400706632 /* ButtonPiece.swift in Sources */,
-				834A516C1F02AA9C00177D9D /* ImageSizingHandler.swift in Sources */,
+				83087AD81F15EA3B00415F4B /* UsefulExtensions.swift in Sources */,
+				83087ADC1F15EA4500415F4B /* ButtonWheel.swift in Sources */,
+				83087AD21F15EA1D00415F4B /* ButtonViewBuilder.swift in Sources */,
+				83087AD41F15EA1D00415F4B /* VectorHelp.swift in Sources */,
+				83087AD71F15EA3B00415F4B /* Enums.swift in Sources */,
+				83087ADB1F15EA4500415F4B /* ButtonPiece.swift in Sources */,
 				836D8A4A1EF1E6D7003BC9DC /* AppDelegate.swift in Sources */,
-				834A516A1F02A96F00177D9D /* VectorHelp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
