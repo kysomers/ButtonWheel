@@ -2,16 +2,27 @@
 
 ButtonWheel lets you create a circular collection of buttons. It's recommended for use whenever an app would want to give a lot of options or centralized navigation with a sleek, modern look. It allows for customization on images and labels for the buttons as well as more basic attributes like color, dimension, and shape.
 
+You can import it into your project by putting this into your podfile:
+
+`pod 'ButtonWheel'`
+
 <img src="http://i.imgur.com/FSdk7kE.png" width="250">
 
 
 ## Use
+
+After importing it into your project by putting `pod 'ButtonWheel'` in your podfile under frameworks and entering `pod install` into the command line. You can use ButtonWheel in any file by writing `import ButtonWheel` in that file.
 
 #### ButtonWheel
 
 `init?(coder aDecoder: NSCoder)` or `override init(frame: CGRect) `
 
 ButtonWheel inherits from UIView. It can be instantiated either in storyboard or programmatically with the methods above from its superclass.
+
+If you do instantiate it using an IBOutlet to storyboard, be sure to set both the class and the module in storyboard like this.
+
+<img src="http://i.imgur.com/WKR1W5x.png" width="250">
+
 
 `func setupWith(buttonPieces : [ButtonPiece], middleRadius : MiddleRadiusSize)`
 
